@@ -1,6 +1,6 @@
 <div align="center">
 
-# How to run LLM (mistral 7b) on Raspberry Pi 5
+# How to run OpenwebOllama-UI on Raspberry Pi 5
 
   <img src="./images/raspberrypi.jpeg" alt="How to run LLM (mistral 7b) on Raspberry Pi 5" width="300px" />
 
