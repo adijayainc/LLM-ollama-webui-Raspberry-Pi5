@@ -110,4 +110,4 @@ That is it!
 - [Youtube video on how to run Ollama on Raspberry Pi](https://www.youtube.com/watch?v=ewXANEIC8pY)
 - [Llama.cpp own example](https://github.com/garyexplains/examples/blob/master/how-to-run-llama-cpp-on-raspberry-pi.md)
 - [Youtube video on how to setup Raspberry PI headlessly](https://www.youtube.com/watch?v=9fEnvDgxwbI)
-- [Adam on Twitter](https://twitter.com/adamcohenhillel)
+- [Adijayainc Twitter](https://twitter.com/adijayainc)
