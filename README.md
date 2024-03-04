@@ -12,9 +12,10 @@ Step-by-Step Guide on how to run Large Language Model on a Raspberry Pi 5 (might
 
 1. [Prerequisite](#prerequisite)
 2. [Setup Raspberry Pi](#setup-raspberry-pi-headless-setup)
-3. [Option 1: Run LLMs using Ollama](#option-1-run-llms-using-ollama)
-4. [Option 2: Run LLMs using Llama.cpp](#option-2-run-llms-using-llamacpp)
-5. [Extra Resoucres](#extra-resoucres)
+3. [setup Docker Composer](#setup-docker-composer)
+4. [Option 1: Run LLMs using Ollama](#option-1-run-llms-using-ollama)
+5. [Option 2: Run LLMs using Llama.cpp](#option-2-run-llms-using-llamacpp)
+6. [Extra Resoucres](#extra-resoucres)
 
 ---
 
@@ -48,6 +49,8 @@ You can also follow along this [YouTube video](https://www.youtube.com/watch?v=9
 ```bash
 ssh ssh <YOUR_USERNAME>@raspberrypi.local
 ```
+### Setup Docker Composer
+1. install docker 
 
 ### Option 1: Run LLMs using Ollama
 
