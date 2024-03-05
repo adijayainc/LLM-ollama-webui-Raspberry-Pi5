@@ -2,7 +2,7 @@
 
 # How to run OpenwebOllama-UI on Raspberry Pi 5
 
-  <img src="./images/raspberrypi.jpeg" alt="How to run LLM (mistral 7b) on Raspberry Pi 5" width="300px" />
+  <img src="./images/raspberrypi.jpg" alt="How to run LLM OpenWebUI) on Raspberry Pi 5" width="500px" />
 
 Step-by-Step Guide on how to run Large Language Model on a Raspberry Pi 5 (might work on 4 too, haven't tested it yet)
 
