@@ -2,7 +2,7 @@
 
 # How to run OpenwebOllama-UI on Raspberry Pi 5
 
-  <img src="./images/raspberrypi.jpeg" alt="How to run LLM (mistral 7b) on Raspberry Pi 5" width="300px" />
+  <img src="./images/raspberrypi.jpg" alt="How to run LLM (mistral 7b) on Raspberry Pi 5" width="300px" />
 
 Step-by-Step Guide on how to run Large Language Model on a Raspberry Pi 5 (might work on 4 too, haven't tested it yet)
 
@@ -31,14 +31,14 @@ You can also follow along this [YouTube video](https://www.youtube.com/watch?v=9
 1. Connect the SD card to your laptop
 2. Download Raspberry Pi OS (bootloader): [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/)
 3. Run it, and you should see:
-   ![screenshot1.png](./images/screenshot1.png)
+   ![screenshot1.png](./images/Screenshot01.png)
    - "Choose Device" - choose Raspberry Pi 5
    - OS, choose the latest (64bit is the recommended)
    - "Choose Storage" - choose the inserted SD card
 4. Now click next, and it will ask you if you want to edit the settings, click "Edit settings"
-   ![screenshot2.png](./images/screenshot2.png)
+   ![screenshot2.png](./images/Screenshot02.png)
 5. Configure
-   ![screenshot3.png](./images/screenshot3.png)
+   ![screenshot3.png](./images/Screenshot03.png)
    - enable hostname and set it to `raspberrypi`.local
    - Set username and password you will remember, we will use them shortly
    - Enable "Configure Wireless LAN" and add your wifi name and password
@@ -50,15 +50,29 @@ You can also follow along this [YouTube video](https://www.youtube.com/watch?v=9
 ssh ssh <YOUR_USERNAME>@raspberrypi.local
 ```
 ### Setup Docker Composer
-1. install docker + docker composer 
+
+1. install Docker : 
 
 ```bash 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+```
+2. add user for running docker 
+
+```bash
 sudo usermod -aG docker ${USER}
+```
+
+3. Check docker installation 
+
+```bash
 sudo su - ${USER}
 docker version
 docker run hello-world
+```
+4. install docker composer 
+
+```bash
 sudo apt-get install libffi-dev libssl-dev
 sudo apt install python3-dev
 sudo apt-get install -y python3 python3-pip
