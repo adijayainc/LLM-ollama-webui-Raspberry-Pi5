@@ -79,19 +79,59 @@ sudo apt-get install -y python3 python3-pip
 sudo pip3 install docker-compose
 ```
 
-### Option 1: Run LLMs using Ollama
+### Setup Ollama : Step by Step Guide
 
-1. Install Ollama:
-
-```bash
-curl -fsSL https://ollama.com/install.sh | sh
-```
-
-2. Download & Run Mistral model:
+1. Download the latest snapshot of ollama-webui :  
 
 ```bash
-ollama run mistral
+git clone https://github.com/ollama-webui/ollama-webui webui
 ```
+
+2. create a docker compose file (you can change user adijaya ):
+
+```bash
+  version: "3.9"
+  services:
+ ollama:
+   container_name: ollama
+   image: ollama/ollama:latest
+   restart: always
+   volumes:
+     - /home/pi/ollama:/root/.ollama
+ ollama-webiu:
+   build:
+     context: ./webui/
+     args:
+       OLLAMA_API_BASE_URL: '/ollama/api'
+     dockerfile: Dockerfile
+   image: ghcr.io/ollama/ollama-webui:main
+   container_name: ollama-webui
+   volumes:
+     - ollama-webui:/app/backend/data
+   depends_on:
+     - ollama
+   ports:
+     - ${OLLAMA_WEBUI_PORT-3000}:8080
+   environment:
+     - 'OLLAMA_API_BASE_URL=http://ollama:11434/api'
+   extra_hosts:
+     - host.docker.internal:host-gateway
+   restart: unless-stopped
+  volumes:
+ ollama-webui: {}
+ ollama: {}
+ 
+ ```
+3. bring the container up : 
+
+```bash 
+docker-compose up -d 
+```
+5. Access the webui at http://localhost:3000
+6. create free account for first login 
+7. Download the model you want to use (see below), by clicking on the litte cog icon selecting model
+   ![Screenshot05.png](./images/Screenshot05.png)
+8. For list of model [model library](https://github.com/ollama/ollama#Model-Library).
 
 That is it!
 
