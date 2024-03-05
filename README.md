@@ -31,14 +31,14 @@ You can also follow along this [YouTube video](https://www.youtube.com/watch?v=9
 1. Connect the SD card to your laptop
 2. Download Raspberry Pi OS (bootloader): [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/)
 3. Run it, and you should see:
-   ![screenshot1.png](./images/screenshot01.png)
+   ![screenshot1.png](./images/Screenshot01.png)
    - "Choose Device" - choose Raspberry Pi 5
    - OS, choose the latest (64bit is the recommended)
    - "Choose Storage" - choose the inserted SD card
 4. Now click next, and it will ask you if you want to edit the settings, click "Edit settings"
-   ![screenshot2.png](./images/screenshot02.png)
+   ![screenshot2.png](./images/Screenshot02.png)
 5. Configure
-   ![screenshot3.png](./images/screenshot03.png)
+   ![screenshot3.png](./images/Screenshot03.png)
    - enable hostname and set it to `raspberrypi`.local
    - Set username and password you will remember, we will use them shortly
    - Enable "Configure Wireless LAN" and add your wifi name and password
