@@ -13,7 +13,7 @@ Step-by-Step Guide on how to run Large Language Model on a Raspberry Pi 5 (might
 1. [Prerequisite](#prerequisite)
 2. [Setup Raspberry Pi](#setup-raspberry-pi-headless-setup)
 3. [setup Docker Composer](#setup-docker-composer)
-4. [Option 1: Run LLMs using Ollama](#option-1-run-llms-using-ollama)
+4. [Setup Ollama-WebUI:step-by-step](#setup-ollama-webui-step-by-step)
 5. [Option 2: Run LLMs using Llama.cpp](#option-2-run-llms-using-llamacpp)
 6. [Extra Resoucres](#extra-resoucres)
 
@@ -79,7 +79,7 @@ sudo apt-get install -y python3 python3-pip
 sudo pip3 install docker-compose
 ```
 
-### Setup Ollama : Step by Step Guide
+### Setup Ollama-WebUI Step by Step Guide:
 
 1. Download the latest snapshot of ollama-webui :  
 
