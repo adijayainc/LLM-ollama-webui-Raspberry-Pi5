@@ -14,9 +14,9 @@ Step-by-Step Guide on how to run Large Language Model on a Raspberry Pi 5 (might
 2. [Setup Raspberry Pi](#setup-raspberry-pi-headless-setup)
 3. [setup Docker Composer](#setup-docker-composer)
 4. [Setup Ollama WebUI:step-by-step Guide](#setup-ollama-webui-step-by-step-guide)
-5. [Option 2: Run LLMs using Llama.cpp](#option-2-run-llms-using-llamacpp)
+5. [Download Model](#Download-Model-on-Ollama-Web-Ui)
 6. [Extra Resoucres](#extra-resoucres)
-
+7. [access API ollama](#access-api)
 ---
 
 ### Prerequisite
@@ -98,7 +98,7 @@ git clone https://github.com/ollama-webui/ollama-webui webui
    restart: always
    volumes:
      - /home/pi/ollama:/root/.ollama
- ollama-webiu:
+ ollama-webui:
    build:
      context: ./webui/
      args:
@@ -135,7 +135,7 @@ docker-compose up -d
 
 That is it!
 
-### Option 2: Run LLMs using llama.cpp:
+### Download Model on Ollama Web UI
 
 1. Install:
 
@@ -178,3 +178,5 @@ That is it!
 - [Llama.cpp own example](https://github.com/garyexplains/examples/blob/master/how-to-run-llama-cpp-on-raspberry-pi.md)
 - [Youtube video on how to setup Raspberry PI headlessly](https://www.youtube.com/watch?v=9fEnvDgxwbI)
 - [Adijayainc Twitter](https://twitter.com/adijayainc)
+
+### Access API
