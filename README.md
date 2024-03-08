@@ -1,10 +1,10 @@
 <div align="center">
 
-# How to run OpenwebOllama-UI on Raspberry Pi 5
+# How to run Mistral 7B  LLM Ollama-Webui on Raspberry Pi 5
 
   <img src="./images/raspberrypi.jpg" alt="How to run LLM (mistral 7b) on Raspberry Pi 5" width="300px" />
 
-Step-by-Step Guide on how to run Large Language Model on a Raspberry Pi 5 (might work on 4 too, haven't tested it yet)
+Step-by-Step Guide on how to run Mistral 7B LLM  on a Raspberry Pi 5 using Docker + Ollama + WebUI
 
 </div>
 
@@ -87,7 +87,7 @@ sudo pip3 install docker-compose
 git clone https://github.com/ollama-webui/ollama-webui webui
 ```
 
-2. create a docker compose file (you can change user adijaya ):
+2. create a docker compose file (you can change user pi ):
 
 ```bash
   version: "3.9"
@@ -135,47 +135,24 @@ docker-compose up -d
 
 That is it!
 
-### Download Model on Ollama Web UI
+### Running Tinyllama Model on Ollama Web UI
 
-1. Install:
+1. Access the web ui login using username already created
 
-```bash
-sudo apt update && sudo apt install git g++ wget build-essential
-```
+![Screenshot06.png](./images/Screenshot06.png)
 
-2. Download llama.cpp repo:
+2. Pull a model form Ollama.com , select tinyllama / mistral:7b
 
-```bash
-git clone https://github.com/ggerganov/llama.cpp
-cd llama.cpp
-```
+![Screenshot07.png](./images/Screenshot07.png)
 
-3. Compile:
+3. Testing asking to webui , "who are you ?"
 
-```bash
-make -j
-```
-
-4. Download Mistral model:
-
-```bash
-cd models
-wget https://huggingface.co/TheBloke/Mistral-7B-v0.1-GGUF/resolve/main/mistral-7b-v0.1.Q4_K_S.gguf)
-```
-
-5. Go back to repo root folder, and run:
-
-```bash
-cd ..
-./main -m models/mistral-7b-v0.1.Q4_K_S.gguf -p "Whatsup?" -n 400 -e
-```
+![Screenshot08.png](./images/Screenshot08.png)
 
 That is it!
 
 ### Extra Resoucres:
 
-- [Youtube video on how to run Ollama on Raspberry Pi](https://www.youtube.com/watch?v=ewXANEIC8pY)
-- [Llama.cpp own example](https://github.com/garyexplains/examples/blob/master/how-to-run-llama-cpp-on-raspberry-pi.md)
 - [Youtube video on how to setup Raspberry PI headlessly](https://www.youtube.com/watch?v=9fEnvDgxwbI)
 - [Adijayainc Twitter](https://twitter.com/adijayainc)
 
