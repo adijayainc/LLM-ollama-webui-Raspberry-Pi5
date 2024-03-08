@@ -1,10 +1,10 @@
 <div align="center">
 
-# How to run Mistral 7B  LLM Ollama-Webui on Raspberry Pi 5
+# How to run TinyLlama Using Ollama-Webui on Raspberry Pi 5
 
   <img src="./images/raspberrypi.jpg" alt="How to run LLM (mistral 7b) on Raspberry Pi 5" width="300px" />
 
-Step-by-Step Guide on how to run Mistral 7B LLM  on a Raspberry Pi 5 using Docker + Ollama + WebUI
+Step-by-Step Guide on how to run TinyLama LLM  on a Raspberry Pi 5 using Docker + Ollama + WebUI
 
 </div>
 
