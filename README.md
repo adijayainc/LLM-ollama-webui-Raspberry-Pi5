@@ -79,7 +79,7 @@ sudo apt-get install -y python3 python3-pip
 sudo pip3 install docker-compose
 ```
 
-### Setup Ollama-WebUI Step by Step Guide:
+### Setup Ollama-WebUI Step by Step Guide: ( Replace with Open Web UI)
 
 1. Download the latest snapshot of ollama-webui :  
 
@@ -156,4 +156,14 @@ That is it!
 - [Youtube video on how to setup Raspberry PI headlessly](https://www.youtube.com/watch?v=9fEnvDgxwbI)
 - [Adijayainc Twitter](https://twitter.com/adijayainc)
 
+### Update Docker Images
+
+```bash 
+docker-compose pull 
+docker-compose up --force-recreate --build -d 
+docker image prune -f
+```
+
+
 ### Access API
+
