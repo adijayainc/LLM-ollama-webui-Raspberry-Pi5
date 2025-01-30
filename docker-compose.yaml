@@ -2,6 +2,7 @@ services:
   ollama:
     volumes:
       - /home/adijaya/ollama:/root/.ollama
+      - /home/adijaya/project:/root/project
     container_name: ollama
     pull_policy: always
     tty: true
