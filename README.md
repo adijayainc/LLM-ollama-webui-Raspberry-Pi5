@@ -159,6 +159,9 @@ That is it!
 ### Update Docker Images
 
 ```bash 
+docker-compose stop
+docker container rm [container-name]
+docker rmi [images]
 docker-compose pull 
 docker-compose up --force-recreate --build -d 
 docker image prune -f
